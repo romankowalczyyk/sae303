@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Découvrez la France depuis Metz en Train</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>🚆 Découvrez la France depuis Metz</h1>
+            <p>Explorez les plus belles destinations touristiques accessibles en train</p>
+        </div>
+    </header>
+
+    <nav class="filters">
+        <button class="filter-btn active" onclick="filterTime('all')">Toutes les destinations</button>
+        <button class="filter-btn" onclick="filterTime('2h')">⏱️ Moins de 2h</button>
+        <button class="filter-btn" onclick="filterTime('3h')">⏱️ Moins de 3h</button>
+        <button class="filter-btn" onclick="filterTime('4h')">⏱️ Moins de 4h</button>
+    </nav>
+
+    <div class="container">
+        <section class="stats">
+            <div class="stat-card">
+                <div class="stat-number">25+</div>
+                <div class="stat-label">Destinations accessibles</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">150+</div>
+                <div class="stat-label">Sites touristiques</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">0%</div>
+                <div class="stat-label">Émissions CO₂ en train</div>
+            </div>
+        </section>
+
+        <section class="map-section">
+            <h2>🗺️ Carte interactive des destinations</h2>
+            <div id="map"></div>
+        </section>
+
+        <section class="destinations-section">
+            <h2 class="section-title">✨ Destinations populaires</h2>
+            <div class="destinations" id="destinations">
+                <!-- Paris -->
+                <article class="destination-card" data-time="85">
+                    <div class="card-header">
+                        <h3>Paris</h3>
+                        <span class="card-time">🚄 1h25</span>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description"><strong>La capitale française</strong></p>
+                        <div class="attractions">
+                            <div class="attraction-item">
+                                <div class="attraction-icon">🗼</div>
+                                <div class="attraction-name">Tour Eiffel</div>
+                            </div>
+                            <div class="attraction-item">
+                                <div class="attraction-icon">🖼️</div>
+                                <div class="attraction-name">Musée du Louvre</div>
+                            </div>
+                            <div class="attraction-item">
+                                <div class="attraction-icon">⛪</div>
+                                <div class="attraction-name">Notre-Dame</div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Strasbourg -->
+                <article class="destination-card" data-time="95">
+                    <div class="card-header">
+                        <h3>Strasbourg</h3>
+                        <span class="card-time">🚄 1h35</span>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description"><strong>Capitale européenne</strong></p>
+                        <div class="attractions">
+                            <div class="attraction-item">
+                                <div class="attraction-icon">🏛️</div>
+                                <div class="attraction-name">Cathédrale</div>
+                            </div>
+                            <div class="attraction-item">
+                                <div class="attraction-icon">🏘️</div>
+                                <div class="attraction-name">Petite France</div>
+                            </div>
+                            <div class="attraction-item">
+                                <div class="attraction-icon">🇪🇺</div>
+                                <div class="attraction-name">Parlement européen</div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Luxembourg -->
+                <article class="destination-card" data-time="50">
+                    <div class="card-header">
+                        <h3>Luxembourg</h3>
+                        <span class="card-time">🚄 50min</span>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description"><strong>Grand-Duché</strong></p>
+                        <div class="attractions">
+                            <div class="attraction-item">
+                                <div class="attraction-icon">🏰</div>
+                                <div class="attraction-name">Vieille ville</div>
+                            </div>
+                            <div class="attraction-item">
+                                <div class="attraction-icon">🌉</div>
+                                <div class="attraction-name">Pont Adolphe</div>
+                            </div>
+                            <div class="attraction-item">
+                                <div class="attraction-icon">🏛️</div>
+                                <div class="attraction-name">Palais Grand-Ducal</div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Nancy -->
+                <article class="destination-card" data-time="35">
+                    <div class="card-header">
+                        <h3>Nancy</h3>
+                        <span class="card-time">🚄 35min</span>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description"><strong>Art Nouveau</strong></p>
+                        <div class="attractions">
+                            <div class="attraction-item">
+                                <div class="attraction-icon">🏛️</div>
+                                <div class="attraction-name">Place Stanislas</div>
+                            </div>
+                            <div class="attraction-item">
+                                <div class="attraction-icon">🎨</div>
+                                <div class="attraction-name">Musée de l'École de Nancy</div>
+                            </div>
+                            <div class="attraction-item">
+                                <div class="attraction-icon">🌳</div>
+                                <div class="attraction-name">Parc de la Pépinière</div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Reims -->
+                <article class="destination-card" data-time="40">
+                    <div class="card-header">
+                        <h3>Reims</h3>
+                        <span class="card-time">🚄 40min</span>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description"><strong>Cité des Sacres</strong></p>
+                        <div class="attractions">
+                            <div class="attraction-item">
+                                <div class="attraction-icon">⛪</div>
+                                <div class="attraction-name">Cathédrale Notre-Dame</div>
+                            </div>
+                            <div class="attraction-item">
+                                <div class="attraction-icon">🍾</div>
+                                <div class="attraction-name">Caves de Champagne</div>
+                            </div>
+                            <div class="attraction-item">
+                                <div class="attraction-icon">🏛️</div>
+                                <div class="attraction-name">Palais du Tau</div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Colmar -->
+                <article class="destination-card" data-time="130">
+                    <div class="card-header">
+                        <h3>Colmar</h3>
+                        <span class="card-time">🚄 2h10</span>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description"><strong>Alsace authentique</strong></p>
+                        <div class="attractions">
+                            <div class="attraction-item">
+                                <div class="attraction-icon">🏘️</div>
+                                <div class="attraction-name">Petite Venise</div>
+                            </div>
+                            <div class="attraction-item">
+                                <div class="attraction-icon">🍷</div>
+                                <div class="attraction-name">Route des vins</div>
+                            </div>
+                            <div class="attraction-item">
+                                <div class="attraction-icon">🎨</div>
+                                <div class="attraction-name">Musée Unterlinden</div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>Projet réalisé avec les données <strong>Open Data SNCF</strong> et <strong>DATAtourisme</strong></p>
+            <p class="footer-team">Équipe : Roman, Léo, Ethan | Contact : <a href="mailto:thomas.castellengo@univ-reims.fr">thomas.castellengo@univ-reims.fr</a></p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

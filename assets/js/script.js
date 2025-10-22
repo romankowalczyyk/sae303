@@ -9,11 +9,11 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 // ---------------------------
-// 2️⃣ Icônes
+// 2️⃣ Icônes personnalisées
 // ---------------------------
 const purpleIcon = L.divIcon({
     className: 'custom-icon',
-    html: `<div style="background: rgb(141, 232, 254); width:30px; height:30px; border-radius:50%; border:3px solid white;"></div>`,
+    html: `<div style="background: #0c131f; width:20px; height:20px; border-radius:50%; border:3px solid white;"></div>`,
     iconSize: [30,30],
     iconAnchor: [15,15]
 });
@@ -26,139 +26,246 @@ const metzIcon = L.divIcon({
 });
 
 // ---------------------------
-// 3️⃣ Marqueur Metz
+// 3️⃣ Marqueur Metz (toujours visible)
 // ---------------------------
-L.marker([49.1193, 6.1757], {icon: metzIcon})
+const metzMarker = L.marker([49.1193, 6.1757], {icon: metzIcon})
  .addTo(map)
- .bindPopup(`<div style="text-align:center;"><strong style="color:#88256F;">Metz</strong><br>Point de départ</div>`);
+ .bindPopup(`
+    <div style="text-align:center;">
+        <strong style="color:#88256F;">Metz (Point de départ)</strong><br>
+        Jeu de piste le Palais, De jardins en musique...
+    </div>
+ `);
 
 // ---------------------------
-// 4️⃣ Conteneur cartes HTML
+// 4️⃣ Stockage global
 // ---------------------------
-const cardsContainer = document.getElementById('destinations-container');
+const allDestinations = [];
 
 // ---------------------------
-// 5️⃣ Animation scroll pour les cartes
+// 5️⃣ Fonction SUPER ROBUSTE pour extraire les minutes
 // ---------------------------
-const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if(entry.isIntersecting){
-            entry.target.style.animation = 'fadeIn 0.6s ease forwards';
-            observer.unobserve(entry.target);
-        }
-    });
-}, observerOptions);
-
-// ---------------------------
-// 6️⃣ CSS animation fadeIn
-// ---------------------------
-const style = document.createElement('style');
-style.textContent = `
-    @keyframes fadeIn {
-        from { opacity:0; transform: translateY(20px); }
-        to { opacity:1; transform: translateY(0); }
+function extractMinutes(timeStr) {
+    console.log(`⏱️ Conversion de "${timeStr}"`);
+    
+    let totalMinutes = 0;
+    
+    // Chercher les heures (1 h, 1h, 1 H, etc.)
+    const hoursMatch = timeStr.match(/(\d+)\s*h/i);
+    if (hoursMatch) {
+        const hours = parseInt(hoursMatch[1]);
+        totalMinutes += hours * 60;
+        console.log(`  → ${hours} heure(s) = ${hours * 60} min`);
     }
-`;
-document.head.appendChild(style);
+    
+    // Chercher les minutes (35 min, 35min, etc.)
+    const minutesMatch = timeStr.match(/(\d+)\s*min/i);
+    if (minutesMatch) {
+        const minutes = parseInt(minutesMatch[1]);
+        totalMinutes += minutes;
+        console.log(`  → ${minutes} minute(s)`);
+    }
+    
+    console.log(`  ✅ Total = ${totalMinutes} minutes`);
+    return totalMinutes;
+}
 
 // ---------------------------
-// 7️⃣ Récupération du JSON et création marqueurs + cartes
+// 6️⃣ Chargement des données JSON
 // ---------------------------
+console.log('🔄 Chargement du fichier JSON...');
+
 fetch('data/csvjson.json')
-.then(res => res.json())
+.then(res => {
+    if (!res.ok) throw new Error('Fichier JSON introuvable');
+    return res.json();
+})
 .then(data => {
-    data.forEach(dest => {
-        // Conversion coordonnees "lat,lng" -> [lat,lng]
-        const coords = dest.Coordonnees.split(',').map(Number);
-
-        // Marqueur sur la carte
-        L.marker(coords, {icon: purpleIcon}).addTo(map)
-         .bindPopup(`
+    console.log(`✅ ${data.length} destinations trouvées dans le JSON`);
+    console.log('📊 Première destination :', data[0]);
+    
+    // Traiter chaque destination
+    data.forEach((dest, index) => {
+        const coords = dest.Coordonnees.split(',').map(c => parseFloat(c.trim()));
+        const timeMinutes = extractMinutes(dest.TempsDepuisMetz);
+        
+        console.log(`\n🏙️ ${index + 1}. ${dest.Ville} → ${timeMinutes} minutes`);
+        
+        // Créer le marqueur
+        const marker = L.marker(coords, {icon: purpleIcon});
+        marker.bindPopup(`
             <div style="text-align:center; min-width:200px;">
                 <strong style="color:#88256F;">${dest.Ville}</strong><br>
-                <span style="color:#53565A;">${dest.Site_touristique}</span><br>
+                <span style="color:#53565A;">${dest.Site_touristique || 'Destination touristique'}</span><br>
                 <span style="background:#88256F; color:white; padding:5px 10px; border-radius:15px; display:inline-block; margin-top:5px;">
                     🚄 ${dest.TempsDepuisMetz} depuis Metz
                 </span>
             </div>
-         `);
-
-        // Ligne vers Metz
-        L.polyline([[49.1193,6.1757], coords], {
-            color:'#88256F',
-            weight:3,
-            opacity:0.6,
-            dashArray:'8,12',
-            lineJoin:'round'
-        }).addTo(map);
-
-        // Carte HTML pour filtrage
-        if(cardsContainer){
-            // Convertir le temps en minutes pour le filtrage (ex: "50 min" -> 50)
-            const timeMinutes = parseInt(dest.TempsDepuisMetz);
-            const card = document.createElement('div');
-            card.className = 'destination-card';
-            card.dataset.time = timeMinutes;
-            card.innerHTML = `
-                <h3>${dest.Ville}</h3>
-                <p>${dest.Site_touristique}</p>
-                <span>🚄 ${dest.TempsDepuisMetz} depuis Metz</span>
-            `;
-            cardsContainer.appendChild(card);
-            observer.observe(card);
-        }
+        `);
+        
+        // Créer la ligne vers Metz
+        const polyline = L.polyline([[49.1193, 6.1757], coords], {
+            color: '#0c131f',
+            weight: 3,
+            opacity: 0.6,
+            dashArray: '8,12',
+            lineJoin: 'round'
+        });
+        
+        // Stocker tout ensemble
+        allDestinations.push({
+            ville: dest.Ville,
+            timeMinutes: timeMinutes,
+            timeString: dest.TempsDepuisMetz,
+            marker: marker,
+            polyline: polyline,
+            coords: coords
+        });
     });
+    
+    console.log(`\n✅ ${allDestinations.length} destinations chargées avec succès !`);
+    
+    // Afficher toutes les destinations au départ
+    showDestinations('all');
+    
+    // Activer les boutons de filtre
+    setupFilters();
+    
+    console.log('✅ Tout est prêt ! Clique sur les boutons pour filtrer.');
 })
-.catch(err => console.error('Erreur chargement JSON :', err));
+.catch(err => {
+    console.error('❌ ERREUR lors du chargement :', err);
+    alert('❌ Impossible de charger les données.\n\nVérifie que le fichier "data/csvjson.json" existe !');
+});
 
 // ---------------------------
-// 8️⃣ Filtrage par temps
+// 7️⃣ Configuration des boutons de filtre
 // ---------------------------
-function filterTime(filter){
-    const cards = document.querySelectorAll('.destination-card');
+function setupFilters() {
     const buttons = document.querySelectorAll('.filter-btn');
-    buttons.forEach(btn => btn.classList.remove('active'));
-    event.target.classList.add('active');
-
-    cards.forEach(card => {
-        const time = parseInt(card.dataset.time);
-        let show = false;
-        switch(filter){
-            case 'all': show=true; break;
-            case '2h': show=time<=120; break;
-            case '3h': show=time<=180; break;
-            case '4h': show=time<=240; break;
-        }
-        if(show){
-            card.style.display='block';
-            card.style.animation='fadeIn 0.5s ease';
-        }else{
-            card.style.display='none';
-        }
+    console.log(`🔘 ${buttons.length} boutons de filtre trouvés`);
+    
+    buttons.forEach((btn, index) => {
+        const filterValue = btn.getAttribute('data-filter');
+        console.log(`  Bouton ${index + 1}: "${btn.textContent.trim()}" → filtre="${filterValue}"`);
+        
+        btn.addEventListener('click', function() {
+            console.log(`\n🖱️ CLIC sur le bouton : ${filterValue}`);
+            
+            // Retirer la classe active de tous les boutons
+            buttons.forEach(b => b.classList.remove('active'));
+            
+            // Ajouter au bouton cliqué
+            this.classList.add('active');
+            
+            // Appliquer le filtre
+            showDestinations(filterValue);
+        });
     });
 }
 
 // ---------------------------
-// 9️⃣ Animation pour les stats
+// 8️⃣ Affichage des destinations selon le filtre
+// ---------------------------
+function showDestinations(filter) {
+    console.log(`\n🔍 Application du filtre : "${filter}"`);
+    
+    let maxTime = Infinity;
+    
+    // Déterminer le temps max selon le filtre
+    switch(filter) {
+        case '1h':
+            maxTime = 60;
+            console.log('  → Afficher destinations ≤ 60 minutes');
+            break;
+        case '1h30':
+            maxTime = 90;
+            console.log('  → Afficher destinations ≤ 90 minutes');
+            break;
+        case '2h':
+            maxTime = 120;
+            console.log('  → Afficher destinations ≤ 120 minutes');
+            break;
+        case 'all':
+        default:
+            maxTime = Infinity;
+            console.log('  → Afficher TOUTES les destinations');
+            break;
+    }
+    
+    // Filtrer et afficher
+    const visibleMarkers = [metzMarker];
+    let countShown = 0;
+    let countHidden = 0;
+    
+    allDestinations.forEach(dest => {
+        const shouldShow = dest.timeMinutes <= maxTime;
+        
+        if (shouldShow) {
+            // Ajouter à la carte
+            if (!map.hasLayer(dest.marker)) {
+                dest.marker.addTo(map);
+            }
+            if (!map.hasLayer(dest.polyline)) {
+                dest.polyline.addTo(map);
+            }
+            visibleMarkers.push(dest.marker);
+            countShown++;
+        } else {
+            // Retirer de la carte
+            if (map.hasLayer(dest.marker)) {
+                map.removeLayer(dest.marker);
+            }
+            if (map.hasLayer(dest.polyline)) {
+                map.removeLayer(dest.polyline);
+            }
+            countHidden++;
+        }
+    });
+    
+    console.log(`✅ Résultat : ${countShown} affichées, ${countHidden} masquées`);
+    
+    // Ajuster la vue de la carte
+    if (visibleMarkers.length > 1) {
+        const group = L.featureGroup(visibleMarkers);
+        map.fitBounds(group.getBounds(), { 
+            padding: [50, 50],
+            maxZoom: 10
+        });
+        console.log('📍 Carte ajustée aux marqueurs visibles');
+    } else {
+        console.log('📍 Aucune destination à afficher, vue par défaut');
+    }
+}
+
+// ---------------------------
+// 9️⃣ Animation des stats (optionnel)
 // ---------------------------
 window.addEventListener('load', () => {
     const statNumbers = document.querySelectorAll('.stat-number');
     statNumbers.forEach(stat => {
         const finalValue = stat.textContent;
+        const numValue = parseInt(finalValue);
+        
+        if (isNaN(numValue)) return;
+        
         let current = 0;
-        const increment = finalValue.includes('+') ? 1 : 1;
         const duration = 2000;
-        const steps = 50;
+        const steps = 60;
+        const increment = Math.ceil(numValue / steps);
         const stepDuration = duration / steps;
+        
         const counter = setInterval(() => {
-            if(current < parseInt(finalValue)){
-                current += increment;
-                stat.textContent = current + (finalValue.includes('+') ? '+' : finalValue.includes('%') ? '%' : '');
-            }else{
+            current += increment;
+            if (current >= numValue) {
                 stat.textContent = finalValue;
                 clearInterval(counter);
+            } else {
+                const suffix = finalValue.includes('+') ? '+' : finalValue.includes('%') ? '%' : '';
+                stat.textContent = current + suffix;
             }
         }, stepDuration);
     });
 });
+
+console.log('🚀 Script chargé, en attente du DOM...');

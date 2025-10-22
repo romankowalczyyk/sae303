@@ -3,33 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Découvrez la France depuis Metz en Train</title>
-    <link rel="stylesheet" href="style.css">
+    <title>DoroData</title>
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 <body>
     <header>
         <div class="header-content">
-            <h1>🚆 Découvrez la France depuis Metz</h1>
+            <h1>Découvrez la France depuis Metz</h1>
             <p>Explorez les plus belles destinations touristiques accessibles en train</p>
         </div>
     </header>
 
+    <hr>
+
     <nav class="filters">
         <button class="filter-btn active" onclick="filterTime('all')">Toutes les destinations</button>
-        <button class="filter-btn" onclick="filterTime('2h')">⏱️ Moins de 2h</button>
-        <button class="filter-btn" onclick="filterTime('3h')">⏱️ Moins de 3h</button>
-        <button class="filter-btn" onclick="filterTime('4h')">⏱️ Moins de 4h</button>
+        <button class="filter-btn" onclick="filterTime('2h')">Moins de 1h</button>
+        <button class="filter-btn" onclick="filterTime('3h')">Moins de 2h</button>
+        <button class="filter-btn" onclick="filterTime('4h')">Moins de 3h</button>
     </nav>
 
     <div class="container">
         <section class="stats">
             <div class="stat-card">
-                <div class="stat-number">25+</div>
+                <div class="stat-number">50+</div>
                 <div class="stat-label">Destinations accessibles</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number">150+</div>
+                <div class="stat-number">200+</div>
                 <div class="stat-label">Sites touristiques</div>
             </div>
             <div class="stat-card">
@@ -39,14 +41,15 @@
         </section>
 
         <section class="map-section">
-            <h2>🗺️ Carte interactive des destinations</h2>
+            <h2>Carte interactive des destinations</h2>
             <div id="map"></div>
         </section>
 
+        <!--
         <section class="destinations-section">
-            <h2 class="section-title">✨ Destinations populaires</h2>
+            <h2 class="section-title">Destinations populaires</h2>
             <div class="destinations" id="destinations">
-                <!-- Paris -->
+
                 <article class="destination-card" data-time="85">
                     <div class="card-header">
                         <h3>Paris</h3>
@@ -71,7 +74,6 @@
                     </div>
                 </article>
 
-                <!-- Strasbourg -->
                 <article class="destination-card" data-time="95">
                     <div class="card-header">
                         <h3>Strasbourg</h3>
@@ -96,7 +98,6 @@
                     </div>
                 </article>
 
-                <!-- Luxembourg -->
                 <article class="destination-card" data-time="50">
                     <div class="card-header">
                         <h3>Luxembourg</h3>
@@ -121,7 +122,6 @@
                     </div>
                 </article>
 
-                <!-- Nancy -->
                 <article class="destination-card" data-time="35">
                     <div class="card-header">
                         <h3>Nancy</h3>
@@ -146,7 +146,6 @@
                     </div>
                 </article>
 
-                <!-- Reims -->
                 <article class="destination-card" data-time="40">
                     <div class="card-header">
                         <h3>Reims</h3>
@@ -171,7 +170,6 @@
                     </div>
                 </article>
 
-                <!-- Colmar -->
                 <article class="destination-card" data-time="130">
                     <div class="card-header">
                         <h3>Colmar</h3>
@@ -199,6 +197,8 @@
         </section>
     </div>
 
+    -->
+
     <footer>
         <div class="footer-content">
             <p>Projet réalisé avec les données <strong>Open Data SNCF</strong> et <strong>DATAtourisme</strong></p>
@@ -207,6 +207,6 @@
     </footer>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>

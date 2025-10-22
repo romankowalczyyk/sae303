@@ -1,0 +1,373 @@
+[
+  {
+    "TempsDepuisMetz": "0 min",
+    "Ligne": "Toutes",
+    "Ville": "Metz",
+    "Site_touristique": "Jeu de piste le Palais, De jardins en musique, Jeu de piste - Les explorateurs : la Porte des Allemands, Jeu de piste - Les explorateurs : l'enceinte médiévale, Jeu de piste - En quête de Metz, Jeu de piste - Les explorateurs : la basilique Saint-Vincent, Jeu de piste Sur les traces du Sablon, Quartier Outre-Seille, Jeu de piste - Les explorateurs : la place Saint-Louis, Sur les traces du Graoully, Jeu de piste - Les explorateurs : la place de la Comédie, Quartier des Îles, Parcours Art Contemporain, Le P'tit train de Metz, Jeu de piste Metz au temps de l'art déco, Ville Impériale, Jeu de piste - Les explorateurs : la gare de Metz, Jeu de piste - Les explorateurs : la place de la République et l'Esplanade, Bateau solaire Solis Mettensis, Promenade en Bateau Bandièra, Jeu de piste - Les explorateurs : la place d'Armes et l'hôtel de Ville, Le Circuit des remparts et Fort de Bellecroix, Jeu de piste l'Echappée bière, Bateau électro solaire le Graoully - La compagnie des bateaux de Metz, Jeu de piste - Les explorateurs : les vitraux de l'église Saint-Maximin, Véloroute la voie bleue - Metz - Pont-à-Mousson, GR5G de Metz à Sarreguemines, Jeu de piste Plongeons en Outre-Seille, Jeu de piste Tout au long des Fortifications, Jeu de piste Saint-Louis pas à pas, Patrimoine et terroir, Jeu de piste de Citadelle en République, Jeu de piste Rendez-vous sur la Colline, Jeu de piste Autour de la Gare, Jeu de piste le Chemin des Îles, Jeu de piste Au cœur du Quartier des Villas, Les chemins du patrimoine, Les pelouses calcaires de la Taye aux Vaches, GR501 de Plappeville à Bouxieres-sous-Froidmont, Jeu de piste du Haut de Queuleu",
+    "Coordonnees": "49.109161579522755, 6.177610763569207"
+  },
+  {
+    "TempsDepuisMetz": "25 min",
+    "Ligne": "C40",
+    "Ville": "Pont-à-Mousson",
+    "Site_touristique": "Le Grand Tour de Mousson",
+    "Coordonnees": "48.90022373289411, 6.050597634894874"
+  },
+  {
+    "TempsDepuisMetz": "50 min",
+    "Ligne": "C40",
+    "Ville": "Nancy",
+    "Site_touristique": "La Boucle de la Moselle, Itinéraire Urbanisme du début du 20ème siècle, Balade vélo de Nancy à la Colline de Sion, Itinéraire Véloroute La Voie Bleue - Nancy – Charmes, Itinéraire Tourisme à Vélo - Sur les traces de la vallée de Cayenne",
+    "Coordonnees": "48.690627187667, 6.173453947277221"
+  },
+  {
+    "TempsDepuisMetz": "1 h 35 min",
+    "Ligne": "C40",
+    "Ville": "Épinal",
+    "Site_touristique": "Véloroute la voie bleue - Epinal – Bains-les-Bains, Circuit coteaux de St Laurent, Circuit de Bertramenil étang du Bult, Circuit des dix, Circuit des grands bois, Circuit aller Epinal-bouzey, La voie bleue, Itinéraire cyclotouristique n°7 : le pont tremblant, Circuit VTT n°94 Bertramenil, Circuit VTT n° 95 vieux, Saint-Laurent, Circuit VTT n° 96 la pierre Torelle, Circuit autour d'Uzefaing, Circuit VTT n°81 Maisonfaing, Circuit VTT n°85 les écluses, Circuit VTT n° 80 le Void des roches, Circuit VTT n°82 la Vierge, Circuit Randoland : jeu de piste pour toute la famille au château, Circuit Randoland : jeu de piste pour toute la famille dans la ville, Boucle patrimoine n°8 - la Cité des Images",
+    "Coordonnees": "48.17778202348058, 6.441424945910087"
+  },
+  {
+    "TempsDepuisMetz": "30 min",
+    "Ligne": "P56",
+    "Ville": "Onville",
+    "Site_touristique": "",
+    "Coordonnees": "49.01328360530199, 5.98121691560708"
+  },
+  {
+    "TempsDepuisMetz": "40 min",
+    "Ligne": "C40, P56, P57",
+    "Ville": "Conflans-Jarny",
+    "Site_touristique": "",
+    "Coordonnees": "49.16666217332456, 5.868148236824982"
+  },
+  {
+    "TempsDepuisMetz": "55 min",
+    "Ligne": "P56, P57",
+    "Ville": "Étain",
+    "Site_touristique": "Circuit du bois de Tilly au fil de l'Orne",
+    "Coordonnees": "49.207571572140864, 5.63977563192346"
+  },
+  {
+    "TempsDepuisMetz": "1 h 20 min",
+    "Ligne": "P56, P57",
+    "Ville": "Verdun",
+    "Site_touristique": "Circuit VAE - Les villages détruits, Les 25 incontournables de Verdun, Circuit VAE - à la découverte de Verdun, Circuit VAE - Au coeur du champ de bataille, Vélo route voie verte, Parcours d'orientation",
+    "Coordonnees": "49.165513012549546, 5.378755568857469"
+  },
+  {
+    "TempsDepuisMetz": "22 min",
+    "Ligne": "P57",
+    "Ville": "Moyeuvre-Grande",
+    "Site_touristique": "",
+    "Coordonnees": "49.24672872649514, 6.044076344753877"
+  },
+  {
+    "TempsDepuisMetz": "29 min",
+    "Ligne": "P57",
+    "Ville": "Homécourt",
+    "Site_touristique": "",
+    "Coordonnees": "49.218199842085184, 5.997872242853167"
+  },
+  {
+    "TempsDepuisMetz": "17 min",
+    "Ligne": "P57",
+    "Ville": "Rombas-Clouange",
+    "Site_touristique": "",
+    "Coordonnees": "49.255984224301265, 6.09922495044375"
+  },
+  {
+    "TempsDepuisMetz": "12 min",
+    "Ligne": "P57, P51, C52",
+    "Ville": "Hagondange",
+    "Site_touristique": "",
+    "Coordonnees": "49.253208479058735, 6.163905110500641"
+  },
+  {
+    "TempsDepuisMetz": "25 min",
+    "Ligne": "P51, C50, C52",
+    "Ville": "Thionville",
+    "Site_touristique": "Sentier de découverte du Beerenweg, Circuit Saint-Urbain, Circuit de Guentrange, Boucle Charlemagne, Circuit de la Hardt – Volkrange, Boucle du Hostert, Boucle du Warpich, Circuit du plateau d'Algrange, Circuit du Saint-Michel – Beuvange, Promenade linéaire Thionville – Bellevue, Circuit du Babert, Circuit de la croix du chêne - bois de la côte, Circuit du lérot, Circuit du chalet - bois de la côte, Circuit d'Oeutrange - bois de la côte, Circuit du bois de Thionville, Thionville pour les raoudis, Un anniversaire qui déchire, Thionville au temps jadis, L'inspecteur Bonsens, Thionville pour tous - visite guidée à destination du public déficient visuel, Thionville se découvre, Thionville au naturel, Circuit randoland Thionville, Thionville urbanisme allemand, Thionville au moyen-âge, Rallye de Thionville, L'intrepide Jean et son cheval de bois, L'église Saint-Maximin en deux temps, Théodon sur les traces des vignerons, Itinéraire cyclable d'Illange à Hettange-Grande, Véloroute la voie bleue - Thionville – Metz, Chemin de la Moselle  - Thionville-Koenigsmacker-Thionville, Chemin de la Moselle - de Thionville à Apach",
+    "Coordonnees": "49.35372508462712, 6.169815046066895"
+  },
+  {
+    "TempsDepuisMetz": "55 min",
+    "Ligne": "P51",
+    "Ville": "Perl",
+    "Site_touristique": "",
+    "Coordonnees": "42.73606296059095, 1.7983410330287344"
+  },
+  {
+    "TempsDepuisMetz": "1 h 50 min",
+    "Ligne": "P55",
+    "Ville": "Bar-le-Duc",
+    "Site_touristique": "",
+    "Coordonnees": "48.77364611021557, 5.167222994123419"
+  },
+  {
+    "TempsDepuisMetz": "1 h 45 min",
+    "Ligne": "P55",
+    "Ville": "Épernay",
+    "Site_touristique": "Le Vignoble d’Epernay",
+    "Coordonnees": "49.046400070039816, 3.960135457440978"
+  },
+  {
+    "TempsDepuisMetz": "1 h 20 min",
+    "Ligne": "K32",
+    "Ville": "Strasbourg",
+    "Site_touristique": "Circuit des deux capitales Strasbourg-Barr, BR38 La piste des Forts, Petit tour de l'Alsace à vélo, BL184 - Parcours des deux rives, BL478 - Au détour de l'Ill-Rhin, BL999 - Des rives de l’Ill au Canal de la Bruche, BL677 - Châteaux et vignoble de la Couronne d’or, BL551 - Découverte de la ceinture des forts de Strasbourg, Tour de l'Alsace à Vélo (Nord), BR48 Des bords du Rhin au canal de la Marne au Rhin, Tour de l'Alsace à Vélo, Boucle Alsace à Vélo & Tricycle pour tous - Balade des 3 parcs",
+    "Coordonnees": "48.58287025488667, 7.731594953278424"
+  },
+  {
+    "TempsDepuisMetz": "1 h 25 min",
+    "Ligne": "TGV",
+    "Ville": "Paris",
+    "Site_touristique": "Discover Walks - Montmartre, Orsay et les Impressionnistes",
+    "Coordonnees": "48.87694, 2.35917"
+  },
+  {
+    "TempsDepuisMetz": "20 min",
+    "Ligne": "C40",
+    "Ville": "Pagny-sur-Moselle",
+    "Site_touristique": "",
+    "Coordonnees": "48.985819726299184, 6.025828163902249"
+  },
+  {
+    "TempsDepuisMetz": "40 min",
+    "Ligne": "C40",
+    "Ville": "Frouard",
+    "Site_touristique": "Maisons de ville dans le val de Lorraine, Parcours de santé",
+    "Coordonnees": "48.7555875209211, 6.144387714735462"
+  },
+  {
+    "TempsDepuisMetz": "30 min",
+    "Ligne": "C40",
+    "Ville": "Dieulouard",
+    "Site_touristique": "",
+    "Coordonnees": "48.843846545663375, 6.071537730068221"
+  },
+  {
+    "TempsDepuisMetz": "20 min",
+    "Ligne": "C52, P51",
+    "Ville": "Florange",
+    "Site_touristique": "",
+    "Coordonnees": "49.33031211128942, 6.1134703098921666"
+  },
+  {
+    "TempsDepuisMetz": "28 min",
+    "Ligne": "P51, C52",
+    "Ville": "Hettange-Grande",
+    "Site_touristique": "",
+    "Coordonnees": "49.40816787714993, 6.156014864192686"
+  },
+  {
+    "TempsDepuisMetz": "35 min",
+    "Ligne": "C50, C52",
+    "Ville": "Bettembourg",
+    "Site_touristique": "",
+    "Coordonnees": "49.51610, 6.10133"
+  },
+  {
+    "TempsDepuisMetz": "45 min",
+    "Ligne": "C50, C52",
+    "Ville": "Luxembourg",
+    "Site_touristique": "",
+    "Coordonnees": "49.599589130957945, 6.134265090332747"
+  },
+  {
+    "TempsDepuisMetz": "1 h 15 min",
+    "Ligne": "P55",
+    "Ville": "Sampigny",
+    "Site_touristique": "",
+    "Coordonnees": "48.82605967002807, 5.513741507930645"
+  },
+  {
+    "TempsDepuisMetz": "1 h 25 min",
+    "Ligne": "P55",
+    "Ville": "Saint-Mihiel",
+    "Site_touristique": "",
+    "Coordonnees": "48.89620355291544, 5.537580428817329"
+  },
+  {
+    "TempsDepuisMetz": "1 h 35 min",
+    "Ligne": "P55",
+    "Ville": "Loxéville",
+    "Site_touristique": "",
+    "Coordonnees": "48.7511826158534, 5.40659397132737"
+  },
+  {
+    "TempsDepuisMetz": "1 h 10 min",
+    "Ligne": "P55",
+    "Ville": "Ancemont",
+    "Site_touristique": "",
+    "Coordonnees": "49.07061831906204, 5.409984689941416"
+  },
+  {
+    "TempsDepuisMetz": "1 h 05 min",
+    "Ligne": "C53",
+    "Ville": "Sarreguemines",
+    "Site_touristique": "Randonnée Premium Blies-Grenz-Weg, La Blies Partagée, Promenade du Golf, Randoland – Sarreguemines, Réserve naturelle site du golf, Circuit de la Vallée de la Blies, Circuit rando  du Val de Blies, Vélo vis-à-vis, Circuit sur les traces des romains, Eurovéloroute n°5, Euro vélo 5, Voie verte du canal de la sarre, Chemin de Saint-Jacques de Compostelle, Circuit historique de Sarreguemines, Circuit de la Faience, Itinéraire cyclable Sarreguemines – Bliesbruck, Canal de la Sarre, Sentier du héron, Itinéraire cyclable glan-blies, Rando blies wanderweg, Route touristique des arts du feu",
+    "Coordonnees": "49.10675765150686, 7.068669692711922"
+  },
+  {
+    "TempsDepuisMetz": "30 min",
+    "Ligne": "C53",
+    "Ville": "Saint-Avold",
+    "Site_touristique": "Fontaines de Saint-Avold, Parcours pédagogique de l'Apon, Circuits du Club vosgien section de Saint-Avold, Oderfang – Longeville, Circuit découverte Oderfang, Oderfang - Boucheporn – Creutzwald, Oderfang - Porcelette – Creutzwald, Visite de Saint-Avold, Les énergies d'hier et d'aujourd'hui, Balade randoland à Saint-Avold, Circuit du Steinberg, Steinberg - Jeanne d'Arc",
+    "Coordonnees": "49.13850155034888, 6.827858767336507"
+  },
+  {
+    "TempsDepuisMetz": "1 h 55 min",
+    "Ligne": "P55",
+    "Ville": "Châlons-en-Champagne",
+    "Site_touristique": "Chemin des Ecluses, Chemin du Domaine de Coolus, Chemin des Pèlerins, Chemin du canal Saint-Martin, Circuit des Loges de Vignes",
+    "Coordonnees": "48.95524774571877, 4.349003538143236"
+  },
+  {
+    "TempsDepuisMetz": "1 h 35 min",
+    "Ligne": "P55",
+    "Ville": "Vitry-le-François",
+    "Site_touristique": "",
+    "Coordonnees": "48.71778914202396, 4.587569249125139"
+  },
+  {
+    "TempsDepuisMetz": "44 min",
+    "Ligne": "C40",
+    "Ville": "Champigneulles",
+    "Site_touristique": "",
+    "Coordonnees": "48.73593704828113, 6.168327233131958"
+  },
+  {
+    "TempsDepuisMetz": "36 min",
+    "Ligne": "C40",
+    "Ville": "Pompey",
+    "Site_touristique": "",
+    "Coordonnees": "48.77320688484892, 6.130837771364104"
+  },
+  {
+    "TempsDepuisMetz": "1 h 10 min",
+    "Ligne": "C40",
+    "Ville": "Blainville-sur-l'Eau",
+    "Site_touristique": "Val de Meurthe - le bois qui tousse, Val de Meurthe - circuit vtt, Val de Meurthe - château d'adoménil, Balade autour d'Einvaux et Landécourt",
+    "Coordonnees": "48.56500, 6.38695"
+  },
+  {
+    "TempsDepuisMetz": "10 min",
+    "Ligne": "C50",
+    "Ville": "Woippy",
+    "Site_touristique": "Le sentier historique de Woippy",
+    "Coordonnees": "49.14871928025596, 6.1560828358629305"
+  },
+  {
+    "TempsDepuisMetz": "13 min",
+    "Ligne": "C40",
+    "Ville": "Maizières-lès-Metz",
+    "Site_touristique": "Liaison cyclable des rives de Moselle",
+    "Coordonnees": "49.21521520991325, 6.158175382711178"
+  },
+  {
+    "TempsDepuisMetz": "43 min",
+    "Ligne": "C40",
+    "Ville": "Hettange-Grande",
+    "Site_touristique": "Sentier de la Réserve Naturelle Nationale Géologique, Sentier de Soetrich, Parcours ludique - Enquête à Hettange-Grande",
+    "Coordonnees": "49.40816787714993, 6.156014864192686"
+  },
+  {
+    "TempsDepuisMetz": "30 min",
+    "Ligne": "K32",
+    "Ville": "Morhange",
+    "Site_touristique": "Randonnée pédestre autour de l'étang de la Mutche, Balade randoland à Morhange, Circuit vtt des panoramas",
+    "Coordonnees": "48.936755008009186, 6.659189553625377"
+  },
+  {
+    "TempsDepuisMetz": "40 min",
+    "Ligne": "K32",
+    "Ville": "Réding",
+    "Site_touristique": "Le tour de Réding, Sur les murs des paiens en VTT",
+    "Coordonnees": "48.74277636123813, 7.09506598048777"
+  },
+  {
+    "TempsDepuisMetz": "42 min",
+    "Ligne": "C52",
+    "Ville": "Hombourg-Haut",
+    "Site_touristique": "Circuit du Vieux-Hombourg, Randoland au Vieux-Hombourg, Sur les traces de Mélusine, Circuit de la collégiale de Hombourg-Haut",
+    "Coordonnees": "49.12615707138291, 6.774298292217594"
+  },
+  {
+    "TempsDepuisMetz": "45 min",
+    "Ligne": "C52",
+    "Ville": "Apach",
+    "Site_touristique": "GR501 d'Apach à Yutz, Circuit du Hammelsberg, GR5 d'Apach à Novéant-sur-Moselle",
+    "Coordonnees": "49.458939676397556, 6.372327388100889"
+  },
+  {
+    "TempsDepuisMetz": "38 min",
+    "Ligne": "C52",
+    "Ville": "Malling",
+    "Site_touristique": "Route des vins de Moselle - Pays des trois Frontières",
+    "Coordonnees": "49.421695, 6.302472"
+  },
+  {
+    "TempsDepuisMetz": "42 min",
+    "Ligne": "C52",
+    "Ville": "Sierck-les-Bains",
+    "Site_touristique": "Circuit des Quartzites, CIRCUIT M3 TRAIL, Véloroute la voie bleue - Sierck-les-bains - Thionville",
+    "Coordonnees": "49.4431,  6.3608"
+  },
+  {
+    "TempsDepuisMetz": "15 min",
+    "Ligne": "C53",
+    "Ville": "Rémilly",
+    "Site_touristique": "Les jolis fous",
+    "Coordonnees": "49.01480004891908, 6.394501274463499"
+  },
+  {
+    "TempsDepuisMetz": "50 min",
+    "Ligne": "C53",
+    "Ville": "Forbach",
+    "Site_touristique": "Visite à la découverte du Forbach insolite, Balade ludique Randoland à la Chapelle Saint-Croix, Balade ludique Randoland au Parc du Schlossberg, Visite en audioguide du Parc et du Château du Schlossberg, Shonen Bar",
+    "Coordonnees": "49.189372195829954, 6.90086917718654"
+  },
+  {
+    "TempsDepuisMetz": "13 min",
+    "Ligne": "C40",
+    "Ville": "Novéant-sur-Moselle",
+    "Site_touristique": "GR5 de Novéant-sur-Moselle à Dieuze",
+    "Coordonnees": "49.02816598956965, 6.052355404407257"
+  },
+  {
+    "TempsDepuisMetz": "28 min",
+    "Ligne": "P51",
+    "Ville": "Basse-Ham",
+    "Site_touristique": "À vélo, à la rescousse de Marianne le long de la voie bleue, Circuit du port",
+    "Coordonnees": "49.3806, 6.2344"
+  },
+  {
+    "TempsDepuisMetz": "55 min",
+    "Ligne": "K32",
+    "Ville": "Saverne",
+    "Site_touristique": "Grand Circuit du Brotsch, Circuit des Châteaux, Circuit Grotte Saint-Vit, Circuit Autour du Col de Saverne, Circuit du Haut-Barr, Promenade de la Schlettenbach, Circuit 2 : Églises romanes et Ackerland, Circuit 3 : Grès et réserve de biosphère des Vosges du Nord, Circuit 4 : Rohan, Châteaux et Abbayes, Circuit VTT S3 : La Hoube – Kempel, Canal de la Marne au Rhin, Monts & Forêts, TMV® Traversée du Massif des Vosges à VTT - Saverne – Châtenois, BL370 - Rohan, Châteaux et Abbayes, Trail des Châteaux, V52 Paris - Strasbourg à vélo - Partie alsacienne",
+    "Coordonnees": "48.74447251797221, 7.360883744182714"
+  },
+  {
+    "TempsDepuisMetz": "1 h 25 min",
+    "Ligne": "C40",
+    "Ville": "Charmes",
+    "Site_touristique": "Boucle patrimoine n°2 - Charmes par la voie romaine, Véloroute la voie bleue - Charmes – Epinal, Circuit entre vignes et clochers, Parcours libre pour découvrir Charmes, Sentier \"l'ile-sous-Essegney\", Circuit Randoland : balades ludiques pour petits et grands à Charmes, Géocaching à la découverte du patrimoine",
+    "Coordonnees": "48.37855254576496, 6.301560081129796"
+  },
+  {
+    "TempsDepuisMetz": "1 h 42 min",
+    "Ligne": "C40",
+    "Ville": "Thaon-les-Vosges",
+    "Site_touristique": "Boucle cyclosportive B3 – Le tour d’Igney, Parcours de santé",
+    "Coordonnees": "48.244696503513694, 6.416022747237511"
+  },
+  {
+    "TempsDepuisMetz": "1 h 30min",
+    "Ligne": "C40",
+    "Ville": "Vincey",
+    "Site_touristique": "Boucle patrimoine n°3 - les vergers des Vosges, Boucle patrimoine n°4 - la verrerie de Portieux",
+    "Coordonnees": "48.34325104915309, 6.335789333609581"
+  }
+]

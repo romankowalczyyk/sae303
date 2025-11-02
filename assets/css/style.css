@@ -7,8 +7,8 @@
     --sncf-light-grey: #E4E5E6;
     --sncf-white: #FFFFFF;
     --sncf-black: #1D1D1B;
-    --sncf-new-blue:#0c131f;
-    --sncf-new-light-blue:rgb(141, 232, 254);
+    --sncf-new-blue: #0c131f;
+    --sncf-new-light-blue: rgb(141, 232, 254);
 }
 
 /* Reset */
@@ -33,7 +33,6 @@ header {
     text-align: center;
 }
 
-
 .header-content h1 {
     font-size: 3em;
     font-weight: 700;
@@ -47,15 +46,6 @@ header {
     max-width: 800px;
     margin: 0 auto;
     font-weight: 300;
-}
-
-hr {
-    width: 95%;               /* la ligne fait 50% de la largeur du conteneur */
-    border: 1.5px solid var(--sncf-white);
-    border-radius: 5px;
-    height: 2px;
-    background-color: var(--sncf-white);
-    margin: 0px auto;        /* auto centre horizontalement la ligne */
 }
 
 /* Filters Navigation */
@@ -102,14 +92,13 @@ hr {
 
 /* Stats Section */
 .stats {
-    background: var(--sncf-white);
-    padding: 25px 20px; /* padding vertical 25px, horizontal 20px */
+    background: var(--sncf-new-blue);
+    padding: 40px 20px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
     margin-bottom: 50px;
-    width: 100vw;       /* prend toute la largeur de la fenêtre */
-    margin-left: calc(-50vw + 50%); /* recentre la section */
+    border-radius: 15px;
 }
 
 .stat-card {
@@ -117,7 +106,6 @@ hr {
     padding: 40px;
     border-radius: 15px;
     text-align: center;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
 
@@ -162,126 +150,16 @@ hr {
     border: 3px solid var(--sncf-white);
 }
 
-/* Destinations Section 
-.destinations-section {
-    margin-top: 50px;
-}
-
-.section-title {
-    color: var(--sncf-new-blue);
-    font-size: 2.2em;
-    margin-bottom: 40px;
-    font-weight: 700;
-    text-align: center;
-}
-
-.destinations {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 30px;
-}
-
-/* Destination Cards 
-.destination-card {
-    background: var(--sncf-white);
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    cursor: pointer;
-    border: 2px solid transparent;
-}
-
-.destination-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(136, 37, 111, 0.25);
-    border-color: var(--sncf-purple);
-}
-
-.card-header {
-    background: var(--sncf-purple);
-    color: var(--sncf-white);
-    padding: 30px;
-}
-
-.card-header h3 {
-    font-size: 2em;
-    margin-bottom: 12px;
-    font-weight: 700;
-}
-
-.card-time {
-    display: inline-block;
-    background: rgba(255, 255, 255, 0.25);
-    padding: 10px 20px;
-    border-radius: 25px;
-    font-weight: 600;
-    font-size: 1em;
-    backdrop-filter: blur(10px);
-}
-
-.card-body {
-    padding: 30px;
-}
-
-.card-description {
-    font-size: 1.1em;
-    color: var(--sncf-grey);
-    margin-bottom: 20px;
-}
-
-/* Attractions 
-.attractions {
-    margin-top: 20px;
-}
-
-.attraction-item {
-    display: flex;
-    align-items: center;
-    padding: 12px 0;
-    border-bottom: 1px solid var(--sncf-light-grey);
-    transition: background 0.2s ease;
-}
-
-.attraction-item:last-child {
-    border-bottom: none;
-}
-
-.attraction-item:hover {
-    background: rgba(136, 37, 111, 0.05);
-    padding-left: 10px;
-}
-
-.attraction-icon {
-    width: 45px;
-    height: 45px;
-    background: var(--sncf-purple);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 15px;
-    font-size: 1.3em;
-    flex-shrink: 0;
-}
-
-.attraction-name {
-    font-size: 1em;
-    color: var(--sncf-grey);
-    font-weight: 500;
-}
-
 /* Footer */
 footer {
-    width: 100%;               /* prend toute la largeur */
+    width: 100%;
     background: var(--sncf-new-blue);
     color: var(--sncf-white);
     padding: 50px 20px;
     text-align: center;
     margin-top: 80px;
-    box-sizing: border-box;    /* inclut le padding dans la largeur */
+    box-sizing: border-box;
 }
-
 
 .footer-content p {
     margin: 10px 0;
@@ -290,7 +168,7 @@ footer {
 
 .footer-team {
     margin-top: 20px;
-    opacity: 0.8;    
+    opacity: 0.8;
 }
 
 footer a {
@@ -301,8 +179,9 @@ footer a {
 }
 
 footer a:hover {
-    color: var(--sncf-purple);
+    color: var(--sncf-new-light-blue);
     text-decoration: underline;
+    opacity: 0.8;
 }
 
 /* Responsive Design */
@@ -337,10 +216,6 @@ footer a:hover {
         font-size: 2.5em;
     }
 
-    .destinations {
-        grid-template-columns: 1fr;
-    }
-
     .map-section {
         padding: 25px;
     }
@@ -351,11 +226,7 @@ footer a:hover {
         font-size: 1.6em;
     }
 
-    .card-header h3 {
-        font-size: 1.6em;
-    }
-
-    .section-title {
+    .map-section h2 {
         font-size: 1.8em;
     }
 }
